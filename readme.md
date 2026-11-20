@@ -47,4 +47,30 @@ app/            API (FastAPI) dan antarmuka (Streamlit)
 
 ## Keterbatasan
 
-[Dalam kondisi apa model ini tidak dapat dipercaya? Data apa yang belum tersedia?]
+Model Machine Learning yang dikembangkan dalam proyek ini memiliki beberapa keterbatasan yang perlu diperhatikan sebelum digunakan untuk diagnosis kerusakan bearing.
+
+1. **Ketergantungan pada Dataset:** Model hanya dapat memberikan prediksi yang relevan apabila data input memiliki karakteristik dan format yang sesuai dengan dataset yang digunakan selama pelatihan. Prediksi pada data dengan karakteristik yang jauh berbeda berpotensi menghasilkan kesalahan klasifikasi.
+
+2. **Keterbatasan Variasi Data:** Dataset yang digunakan belum tentu mencakup seluruh variasi kondisi kerusakan bearing, jenis bearing, karakteristik mesin, dan lingkungan operasional di dunia industri. Oleh karena itu, kemampuan generalisasi model terhadap mesin atau bearing yang berbeda belum dapat dipastikan.
+
+3. **Tidak Mendukung Prediksi Real-Time:** Model dikembangkan dan dievaluasi menggunakan dataset yang telah dikumpulkan sebelumnya. Model belum dirancang untuk melakukan pemantauan kondisi bearing secara langsung melalui sensor yang terhubung dengan mesin.
+
+4. **Keterbatasan Kategori Diagnosis:** Model hanya mengklasifikasikan empat kategori kondisi bearing, yaitu normal, outer race, inner race, dan bola. Model belum dapat mengidentifikasi tingkat keparahan kerusakan, memprediksi sisa umur bearing (Remaining Useful Life), maupun menentukan waktu terjadinya kegagalan.
+
+5. **Ketergantungan pada Kualitas Data Sensor:** Data sensor yang mengandung noise berlebihan, kesalahan pengukuran, nilai yang tidak valid, atau kondisi sensor yang tidak terkalibrasi dapat memengaruhi hasil prediksi. Preprocessing data tidak sepenuhnya menjamin bahwa seluruh gangguan pengukuran dapat diatasi.
+
+6. **Keterbatasan Validasi di Lingkungan Industri:** Evaluasi model dilakukan menggunakan dataset yang tersedia dan belum membuktikan performa model pada pengujian langsung di lingkungan operasional industri. Oleh karena itu, hasil prediksi belum dapat dijadikan satu-satunya dasar untuk menentukan tindakan pemeliharaan mesin.
+
+### Data yang Belum Tersedia
+
+Beberapa jenis data yang masih diperlukan untuk meningkatkan kemampuan dan keandalan model antara lain:
+
+- Data getaran bearing secara real-time dari mesin industri.
+- Data dari berbagai jenis dan ukuran bearing.
+- Data kerusakan dengan variasi tingkat keparahan, mulai dari kerusakan awal hingga kerusakan berat.
+- Data dari berbagai kondisi operasional, seperti variasi kecepatan putaran, beban, dan temperatur.
+- Data historis perkembangan kerusakan bearing untuk mendukung analisis prediksi sisa umur bearing.
+- Data pengujian langsung pada mesin industri untuk memvalidasi kemampuan generalisasi model.
+
+Dengan mempertimbangkan keterbatasan tersebut, model ini lebih tepat digunakan sebagai alat bantu klasifikasi awal kondisi bearing dan pendukung analisis pemeliharaan, bukan sebagai pengganti inspeksi teknis maupun sistem pemantauan kondisi mesin secara menyeluruh.
+
