@@ -1,6 +1,6 @@
 # Proyek Praktisi Diagnosis Bearing · Tim Lorem Ipsum
 
-**Kasus:** 4 Diagnosis Bearing · **Aplikasi:** [tautan aplikasi](https://proyekpraktisikerusakanbearing-drwvxutgx7jgafczueygac.streamlit.app/) · **Video:** [tautan video]
+**Kasus:** [4 Diagnosis Bearing](https://github.com/nurhikam/mkb-ml-project/blob/main/kasus/04-diagnosis-bearing/brief.md) · **Aplikasi:** [tautan aplikasi](https://proyekpraktisikerusakanbearing-drwvxutgx7jgafczueygac.streamlit.app/) · **Video:** [tautan video]
 
 | Anggota | NIM | Bagian yang dikerjakan |
 |---|---|---|
