@@ -1,6 +1,4 @@
-# [Nama proyek] · Tim [nama tim]
-
-> Salin berkas ini menjadi `README.md` di repositori tim kalian, lalu isi semua bagian di dalam kurung siku.
+# Proyek Praktisi Diagnosis Bearing · Tim Lorem Ipsum
 
 **Kasus:** 4 Diagnosis Bearing · **Aplikasi:** [tautan aplikasi](https://proyekpraktisikerusakanbearing-drwvxutgx7jgafczueygac.streamlit.app/) · **Video:** [tautan video]
 
@@ -11,13 +9,13 @@
 
 ## Masalah dan pengguna
 
-[Dua atau tiga kalimat: siapa penggunanya dan keputusan apa yang dibantu oleh model ini.]
+Pengguna utama model ini adalah teknisi pemeliharaan mesin, operator industri, dan praktisi bidang mekatronika yang bertanggung jawab memantau kondisi bearing pada mesin berputar. Model Machine Learning ini membantu pengguna mengidentifikasi kondisi bearing, baik normal maupun mengalami kerusakan pada outer race, inner race, atau elemen bola, berdasarkan karakteristik data sensor dan parameter operasional. Hasil diagnosis dapat digunakan sebagai dasar pengambilan keputusan dalam menentukan kebutuhan inspeksi dan tindakan pemeliharaan mesin.
 
 ## Data dan pembersihan
 
 | Masalah yang ditemukan | Jumlah baris | Cara menangani |
-|---|---|---|
-| [misalnya baris duplikat] | [angka] | [misalnya dihapus dengan drop_duplicates] |
+| Missing Values | 609 | Menggunakan df.isnull() |
+| Duplicates | 220 | Menggunakan drop_duplicates |
 
 ## Hasil
 
