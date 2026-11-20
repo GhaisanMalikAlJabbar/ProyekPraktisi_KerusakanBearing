@@ -10,8 +10,8 @@
         "outer_race"
     ],
     "evaluation": {
-        "validation_accuracy": 0.8036666666666666,
-        "validation_macro_f1": 0.7286159577443316
+        "validation_accuracy": 0.807,
+        "validation_macro_f1": 0.7311522367431749
     },
-    "saved_at": "2026-11-10T15:12:53.257688"
+    "saved_at": "2026-11-20T08:57:42.550705"
 }
