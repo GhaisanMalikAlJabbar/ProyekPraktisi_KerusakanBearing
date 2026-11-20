@@ -44,7 +44,17 @@ Random Forest terpilih sebagai model final karena menghasilkan Macro F1-Score te
 Hasil tersebut menunjukkan bahwa model mampu melakukan klasifikasi kondisi bearing dengan performa yang cukup baik pada data pengujian. Namun, performa pengenalan setiap kelas masih bervariasi, sehingga pengembangan lebih lanjut diperlukan untuk meningkatkan kemampuan model dalam mendeteksi seluruh jenis kerusakan bearing.
 
 
-*Threshold* yang dipakai: [angka], karena [alasan bisnis].
+
+### Threshold yang Digunakan
+
+**Threshold:** Tidak menggunakan threshold probabilitas tetap (default multiclass prediction).
+
+Model Random Forest menggunakan kelas dengan probabilitas prediksi tertinggi (*argmax*) untuk menentukan kondisi bearing, tanpa menetapkan ambang probabilitas khusus.
+
+Pendekatan ini digunakan karena sistem bertujuan mengklasifikasikan bearing ke dalam empat kondisi, yaitu `normal`, `outer_race`, `inner_race`, dan `bola`. Setiap sampel akan diberikan kategori berdasarkan hasil prediksi dengan probabilitas tertinggi.
+
+Dari sisi kebutuhan operasional, pendekatan ini memungkinkan setiap data memperoleh hasil diagnosis sehingga teknisi dapat menggunakan prediksi sebagai referensi awal untuk menentukan kebutuhan inspeksi dan pemeliharaan bearing.
+
 
 ## Cara menjalankan
 
