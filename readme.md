@@ -5,7 +5,7 @@
 | Anggota | NIM | Bagian yang dikerjakan |
 |---|---|---|
 | Mehtar Raditya Daniswara Susanto | 2400744 | Membuat Aplikasi |
-| Ghaisan Malik Aljabbar | 2400333 | [Membuat Model] |
+| Ghaisan Malik Aljabbar | 2400333 | Membuat Model |
 
 ## Masalah dan pengguna
 
@@ -14,6 +14,7 @@ Pengguna utama model ini adalah teknisi pemeliharaan mesin, operator industri, d
 ## Data dan pembersihan
 
 | Masalah yang ditemukan | Jumlah baris | Cara menangani |
+|---|---|---|
 | Missing Values | 609 | Menggunakan df.isnull() |
 | Duplicates | 220 | Menggunakan drop_duplicates |
 
