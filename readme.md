@@ -18,12 +18,31 @@ Pengguna utama model ini adalah teknisi pemeliharaan mesin, operator industri, d
 | Missing Values | 609 | Menggunakan df.isnull() |
 | Duplicates | 220 | Menggunakan drop_duplicates |
 
+
 ## Hasil
 
-| Model | [metrik utama] *validation* | [metrik utama] *test* |
-|---|---|---|
-| *Baseline*: [nama *baseline*] | | |
-| [model final] | | |
+Evaluasi model dilakukan menggunakan validation set dan test set dengan Macro F1-Score sebagai metrik utama. Logistic Regression digunakan sebagai model baseline, sedangkan Random Forest dipilih sebagai model final berdasarkan hasil perbandingan performa pada validation set.
+
+| Model | Macro F1 *validation* | Macro F1 *test* |
+|---|---:|---:|
+| *Baseline*: Logistic Regression | 0.7256 | - |
+| *Final Model*: Random Forest | 0.7312 | 0.7548 |
+
+### Hasil Evaluasi Model Final
+
+Model Random Forest memperoleh hasil evaluasi sebagai berikut:
+
+| Metrik | Validation | Test |
+|---|---:|---:|
+| Accuracy | 0.8070 | 0.8203 |
+| Precision (Macro) | 0.8212 | 0.8365 |
+| Recall (Macro) | 0.6851 | 0.7107 |
+| Macro F1-Score | 0.7312 | 0.7548 |
+
+Random Forest terpilih sebagai model final karena menghasilkan Macro F1-Score tertinggi pada validation set dibandingkan model lainnya. Pada test set, model memperoleh Macro F1-Score sebesar 0.7548 dan Accuracy sebesar 0.8203.
+
+Hasil tersebut menunjukkan bahwa model mampu melakukan klasifikasi kondisi bearing dengan performa yang cukup baik pada data pengujian. Namun, performa pengenalan setiap kelas masih bervariasi, sehingga pengembangan lebih lanjut diperlukan untuk meningkatkan kemampuan model dalam mendeteksi seluruh jenis kerusakan bearing.
+
 
 *Threshold* yang dipakai: [angka], karena [alasan bisnis].
 
