@@ -19,9 +19,11 @@ st.set_page_config(
     layout="wide"
 )
 
-API_URL = os.getenv(
-    "API_URL",
-    "http://127.0.0.1:8000"
+API_URL = str(
+    st.secrets.get(
+        "API_URL",
+        os.getenv("API_URL", "http://127.0.0.1:8000")
+    )
 ).rstrip("/")
 
 PREDICT_URL = f"{API_URL}/predict"
