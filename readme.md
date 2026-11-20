@@ -31,15 +31,15 @@ Pengguna utama model ini adalah teknisi pemeliharaan mesin, operator industri, d
 
 ```bash
 pip install -r requirements.txt
-uvicorn app.api.main:app --reload       # API
-streamlit run app/ui/streamlit_app.py   # aplikasi
+uvicorn app.api.main:app --reload   # API
+streamlit run app.py                # aplikasi
 ```
 
 ## Struktur repositori
 
 ```
 notebooks/      notebook dari EDA sampai penyimpanan model
-data/           data mentah (dan data bersih jika perlu)
+data/sample     data mentah (dan data bersih jika perlu)
 src/features.py fungsi pembuat fitur, dipakai saat pelatihan dan saat prediksi
 artifacts/      model.joblib + metadata.json
 app/            API (FastAPI) dan antarmuka (Streamlit)
@@ -48,14 +48,3 @@ app/            API (FastAPI) dan antarmuka (Streamlit)
 ## Keterbatasan
 
 [Dalam kondisi apa model ini tidak dapat dipercaya? Data apa yang belum tersedia?]
-
-## Daftar periksa sebelum dikumpulkan
-
-- [ ] Repositori bersifat publik dan setiap anggota memiliki *commit*
-- [ ] *Notebook* dapat dijalankan ulang dari awal sampai akhir tanpa galat
-- [ ] *Baseline* wajib dilaporkan dan dibandingkan
-- [ ] Data *test* hanya dibuka satu kali, di akhir
-- [ ] `artifacts/metadata.json` berisi versi model, fitur masukan, *threshold*, dan metrik
-- [ ] Aplikasi dapat dibuka orang lain melalui tautan, termasuk dari ponsel
-- [ ] Aplikasi tidak berhenti mendadak ketika menerima masukan yang tidak wajar
-- [ ] Laporan paling banyak 6 halaman dan video paling lama 5 menit
