@@ -60,7 +60,7 @@ Dari sisi kebutuhan operasional, pendekatan ini memungkinkan setiap data mempero
 
 ```bash
 pip install -r requirements.txt
-uvicorn app.api.main:app --reload   # API
+uvicorn api.main:app --reload   # API
 streamlit run app.py                # aplikasi
 ```
 
