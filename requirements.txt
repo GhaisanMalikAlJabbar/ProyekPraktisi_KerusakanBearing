@@ -3,3 +3,8 @@ scikit-learn==1.6.1
 joblib
 pandas
 numpy
+
+fastapi
+uvicorn[standard]
+
+requests
